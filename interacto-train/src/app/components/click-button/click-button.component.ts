@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PartialButtonBinder,  CommandBase, WidgetData, KeysData } from 'interacto';
+import { PartialButtonBinder,  CommandBase, PointData, PartialPointBinder } from 'interacto';
 
 @Component({
   selector: 'app-click-button',
@@ -21,10 +21,10 @@ export class ClickButtonComponent {
   }
 
   
-  public binderRightClick(binder: PartialButtonBinder): void {
+  public binderRightClick(binder: PartialPointBinder): void {
     binder
       .toProduce(() => new HelloWorldCommand())
-      /*.when(i=> i. === 2)*/
+      .when((i: PointData) => i.button === 2)
       .bind();
   }
 
