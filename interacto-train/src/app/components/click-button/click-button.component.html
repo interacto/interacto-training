@@ -1,0 +1,42 @@
+
+<!-- First step: using toProduceAnon in clicking a button to print hello world -->
+
+
+
+
+
+<div class="content">
+    <h1>Creating a button with Interacto</h1>
+
+    <h2> 1 </h2> <p> 
+        In this first exercise you will be creating a button using the <code>toProduceAnon</code> 
+        method from Interacto. This allows you to bind an anonymous function to a button click without having to define 
+        a separate method to handle the event. <br>
+        Uppon clicking the button, the console should print "Hello, World!". <br>
+        If you need help, refer to the following documentation: <a href="https://interacto.github.io/commands#anonymous-command">
+        Help </a></p>
+        <h3>Example:</h3>
+    
+    <button [ioButton]="binderClickAnon"> Click me! </button>
+
+
+    <h2> 2 </h2> <p> 
+        In this second exercise you will be creating a button using the <code>toProduce</code> 
+        method from Interacto. Here you must create a command that executes what you need. <br>
+        Uppon clicking the button, the console should print "Hello, World!". <br>
+        <a href="https://interacto.github.io/commands#command"> Help </a></p>
+        <h3>Example:</h3>
+
+    <button [ioButton]="binderClickCmd"> Click me! </button>
+
+    <!-- a question for producing the command only if the right button of the mouse is used (when) -->
+    <h2> 3 </h2> <p> 
+        In this third exercise you will be adding a condition to the previous question. Now the command must
+        only be produced if the right button of the mouse is clocked, you can use the <code>when</code> method from ~
+        Interacto to specify the condition for executing the command. <br>
+        Uppon clicking the button, the console should print "Hello, World!". <br>
+        <a href="https://interacto.github.io/routines#how-to-filter-user-interaction-data-the-when-routine-and-strictstart"> Help </a></p>
+        <h3>Example:</h3>
+
+    <button [ioButton]="binderRightClick"> Click me! </button>
+</div>
