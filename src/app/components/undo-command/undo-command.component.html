@@ -1,0 +1,31 @@
+<div class="container" role="main">
+    
+    <!-- DO I WANT THIS LOG OF BUTTONS CLICKED OR THE LOG SAYING THE COLORS IN THE HISTORY? -->
+    <div class="log-container">
+        <pre #log></pre>
+    </div>
+
+    <div class="content-ex2">
+        <h1>Undoable Commands and Histories</h1>
+    
+        <h2> 1 </h2> <p>
+            In this exercise, you will be using Interacto to create an undoable button. <br>
+            When the button is clicked, its color should change to a randomly generated color. <br>
+            You will also need to implement an undo and redo functionality so that the user can revert the color change. <br>
+            Use Interacto's undoable command functionality to implement this feature. <br>
+            If you need help, refer to the following documentation: 
+            <a href="https://interacto.github.io/commands#undoable-commands">Undoable Commands</a> .</p>
+    
+        <h3>Example:</h3>
+    
+    
+        <button [ioButton] = "binderColor">Click me!</button>
+    
+        <div class="inline-buttons">
+            <button ioUndo>Undo</button>
+            <button ioRedo>Redo</button>
+        </div>
+        <button style="background-color: #002a57;" [routerLink]="['/click-button']" > Previous Exercise </button>
+    </div>
+
+</div>
