@@ -9,11 +9,9 @@ import { PartialButtonBinder, UndoableCommand } from 'interacto';
 
 export class UndoCommandComponent {
 
-  @ViewChild('log', { static: false }) logRef!: ElementRef<HTMLPreElement>;
-
   public binderColor(binder: PartialButtonBinder, button: HTMLButtonElement | HTMLElement): void {
     binder
-      .toProduce(() => new ChangeButtonColor(button, this.logRef.nativeElement))
+      .toProduce(() => new ChangeButtonColor(button))
       .bind();
   }
 }
@@ -23,12 +21,10 @@ export class UndoCommandComponent {
 export class ChangeButtonColor extends UndoableCommand {
   private mementoColor: string = '';
   private previousColor: string = '';
-  private logBox: HTMLPreElement;
   
 
-  constructor(private readonly button: HTMLButtonElement | HTMLElement, logElement: HTMLPreElement) {
+  constructor(private readonly button: HTMLButtonElement | HTMLElement) {
     super();
-    this.logBox = logElement;
   }
 
   protected override createMemento(): void {
@@ -36,22 +32,16 @@ export class ChangeButtonColor extends UndoableCommand {
   }
 
   protected execution(): void {
-    this.logBox.textContent += 'New color\n';
-    this.logBox.scrollTop = this.logBox.scrollHeight;
     const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
     this.button.style.backgroundColor = randomColor;
   }
 
   public undo(): void {
-    this.logBox.textContent += 'Undo color\n';
-    this.logBox.scrollTop = this.logBox.scrollHeight;
     this.previousColor = this.button.style.backgroundColor;
     this.button.style.backgroundColor = this.mementoColor;
   }
 
   public redo(): void {
-    this.logBox.textContent += 'Redo color\n';
-    this.logBox.scrollTop = this.logBox.scrollHeight;
     this.mementoColor = this.button.style.backgroundColor;
     this.button.style.backgroundColor = this.previousColor;
   }
