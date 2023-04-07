@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UndoCommandComponent } from './undo-command.component';
+import { UndoCommandComponent } from './ex2-undo-command.component';
 
 describe('UndoCommandComponent', () => {
   let component: UndoCommandComponent;

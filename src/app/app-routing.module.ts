@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ClickButtonComponent } from './components/click-button/click-button.component';
-import { UndoCommandComponent } from './components/undo-command/undo-command.component';
+import { ClickButtonComponent } from './components/ex1-click-button/ex1-click-button.component';
+import { UndoCommandComponent } from './components/ex2-undo-command/ex2-undo-command.component';
 
 const routes: Routes = [
-  { path: 'click-button', component: ClickButtonComponent },
-  { path: 'undo-command', component: UndoCommandComponent },
-  { path: '', redirectTo: 'click-button', pathMatch: 'full' }
+  { path: 'ex1-click-button', component: ClickButtonComponent },
+  { path: 'ex2-undo-command', component: UndoCommandComponent },
+  { path: '', redirectTo: 'ex1-click-button', pathMatch: 'full' }
 ];
 
 @NgModule({

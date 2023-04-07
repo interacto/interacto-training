@@ -2,9 +2,9 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { PartialButtonBinder, UndoableCommand } from 'interacto';
 
 @Component({
-  selector: 'app-undo-command',
-  templateUrl: './undo-command.component.html',
-  styleUrls: ['./undo-command.component.css']
+  selector: 'app-ex2-undo-command',
+  templateUrl: './ex2-undo-command.component.html',
+  styleUrls: ['./ex2-undo-command.component.css']
 })
 
 export class UndoCommandComponent {

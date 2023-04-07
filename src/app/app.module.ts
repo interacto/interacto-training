@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InteractoModule } from 'interacto-angular';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
-import { ClickButtonComponent } from './components/click-button/click-button.component';
-import { UndoCommandComponent } from './components/undo-command/undo-command.component';
+import { ClickButtonComponent } from './components/ex1-click-button/ex1-click-button.component';
+import { UndoCommandComponent } from './components/ex2-undo-command/ex2-undo-command.component';
 
 @NgModule({
   declarations: [

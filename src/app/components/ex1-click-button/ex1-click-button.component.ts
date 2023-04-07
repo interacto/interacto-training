@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { PartialButtonBinder,  CommandBase, PointData, PartialPointBinder } from 'interacto';
 
 @Component({
-  selector: 'app-click-button',
-  templateUrl: './click-button.component.html',
-  styleUrls: ['./click-button.component.css']
+  selector: 'app-ex1-click-button',
+  templateUrl: './ex1-click-button.component.html',
+  styleUrls: ['./ex1-click-button.component.css']
 })
 export class ClickButtonComponent {
 
