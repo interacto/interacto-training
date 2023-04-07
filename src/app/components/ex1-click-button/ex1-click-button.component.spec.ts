@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ClickButtonComponent } from './ex1-click-button.component';
+import { Ex1ClickButtonComponent } from './ex1-click-button.component';
 
-describe('ClickButtonComponent', () => {
-  let component: ClickButtonComponent;
-  let fixture: ComponentFixture<ClickButtonComponent>;
+describe('Ex1ClickButtonComponent', () => {
+  let component: Ex1ClickButtonComponent;
+  let fixture: ComponentFixture<Ex1ClickButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ClickButtonComponent ]
+      declarations: [ Ex1ClickButtonComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ClickButtonComponent);
+    fixture = TestBed.createComponent(Ex1ClickButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

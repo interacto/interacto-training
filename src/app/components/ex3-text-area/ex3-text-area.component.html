@@ -6,11 +6,11 @@
     </div>
 
     <div class="content-ex2">
-        <h1>Undoable Commands and Histories</h1>
+        <h1>Text Area</h1>
     
-        <p>
-            In this exercise, you will be using Interacto to create an undoable button. <br>
-            When the button is clicked, its color should change to a randomly generated color. <br>
+        <h2> 1 </h2> <p>
+            In this exercise, you will be using Interacto to create a text area and its corresponding ioTextarea interaction. <br>
+            The command will be a command that changes the text of the text area (undoable). <br>
             You will also need to implement an undo and redo functionality so that the user can revert the color change. <br>
             Use Interacto's undoable command functionality to implement this feature. <br>
             If you need help, refer to the following documentation: 
@@ -18,16 +18,16 @@
     
         <h3>Example:</h3>
     
-    
-        <button [ioButton] = "binderColor">Click me!</button>
-    
+        <textarea [ioTextarea]="binderText" rows="16" cols="90"></textarea>
+
         <div class="inline-buttons">
             <button ioUndo>Undo</button>
             <button ioRedo>Redo</button>
         </div>
+        
         <div class="inline-buttons">
-            <button style="background-color: #002a57;" [routerLink]="['/ex1-click-button']" > Previous Exercise </button>
-            <button style="background-color: #002a57;" [routerLink]="['/ex3-text-area']" > Next Exercise </button>
+            <button style="background-color: #002a57; width: 130px;" [routerLink]="['/ex2-undo-command']" > Previous Exercise </button>
+            <button style="background-color: #002a57; width: 130px;" [routerLink]="['/ex3-text-area']"    >   Next Exercise   </button>
         </div>
     </div>
 

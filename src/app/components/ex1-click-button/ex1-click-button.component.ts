@@ -6,7 +6,7 @@ import { PartialButtonBinder,  CommandBase, PointData, PartialPointBinder } from
   templateUrl: './ex1-click-button.component.html',
   styleUrls: ['./ex1-click-button.component.css']
 })
-export class ClickButtonComponent {
+export class Ex1ClickButtonComponent {
 
   public binderClickAnon(binder: PartialButtonBinder): void {
     binder

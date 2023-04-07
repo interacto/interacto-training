@@ -7,7 +7,7 @@ import { PartialButtonBinder, UndoableCommand } from 'interacto';
   styleUrls: ['./ex2-undo-command.component.css']
 })
 
-export class UndoCommandComponent {
+export class Ex2UndoCommandComponent {
 
   public binderColor(binder: PartialButtonBinder, button: HTMLButtonElement | HTMLElement): void {
     binder
@@ -29,21 +29,25 @@ export class ChangeButtonColor extends UndoableCommand {
 
   protected override createMemento(): void {
     this.mementoColor = this.button.style.backgroundColor;
+    console.log('createMemento ' + this.mementoColor);
   }
 
   protected execution(): void {
     const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
     this.button.style.backgroundColor = randomColor;
+    console.log('execution ' + randomColor);
   }
 
   public undo(): void {
     this.previousColor = this.button.style.backgroundColor;
     this.button.style.backgroundColor = this.mementoColor;
+    console.log('undo ' + this.mementoColor);
   }
 
   public redo(): void {
     this.mementoColor = this.button.style.backgroundColor;
     this.button.style.backgroundColor = this.previousColor;
+    console.log('redo ' + this.previousColor);
   }
 
   public override getUndoName(): string {
