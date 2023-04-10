@@ -8,6 +8,7 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { Ex1ClickButtonComponent } from './components/ex1-click-button/ex1-click-button.component';
 import { Ex2UndoCommandComponent } from './components/ex2-undo-command/ex2-undo-command.component';
 import { Ex3TextAreaComponent } from './components/ex3-text-area/ex3-text-area.component';
+import { Ex4ImgDisplayComponent } from './components/ex4-img-display/ex4-img-display.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { Ex3TextAreaComponent } from './components/ex3-text-area/ex3-text-area.c
     TopBarComponent,
     Ex1ClickButtonComponent,
     Ex2UndoCommandComponent,
-    Ex3TextAreaComponent
+    Ex3TextAreaComponent,
+    Ex4ImgDisplayComponent
   ],
   imports: [
     BrowserModule,

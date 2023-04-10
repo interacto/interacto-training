@@ -1,0 +1,32 @@
+<div class="container" role="main">
+    
+
+    <div class="content-ex2">
+        <h1>Image Display</h1>
+    
+        <p>
+            In this exercise, you will use Interacto to create an image carousel with keyboard and mouse interactions.<br>
+            You will implement commands that change the currently displayed image in response to keyboard inputs, and zoom in and out in response to mouse inputs.<br>
+            You will need to implement an undo and redo functionality for the commands, similar to the previous exercises.<br>
+            The image carousel should allow the user to switch between pictures using the left and right arrow keys.<br>
+            Additionally, the user should be able to zoom in and out using the ctrl key and the mouse wheel.<br>
+            If you need help, refer to <a href="https://github.com/interacto/example-angular/tree/master/src/app/tab-pictures"> this example</a> .</p>
+    
+        <h3>Example:</h3>
+        
+        <div #carousel class="carousel">
+            <div #container class="container">
+              <ng-container *ngFor="let picture of pictures; index as i">
+                <img #picture src="{{picture.src}}" alt="{{'image ' + i}}" [hidden]="currentPicture !== i">
+              </ng-container>
+            </div>
+          </div>
+
+
+        <div class="inline-buttons">
+            <button style="background-color: #002a57; width: 130px;" [routerLink]="['/ex3-text-area']" > Previous Exercise </button>
+            <button style="background-color: #002a57; width: 130px;" [routerLink]="['/ex4-img-display']"    >   Next Exercise   </button>
+        </div>
+    </div>
+
+</div>
