@@ -1,0 +1,30 @@
+<div class="container" role="main">
+    
+
+    <div class="content-ex2">
+        <h1>Drag and Drop</h1>
+    
+    
+        <h3>Example:</h3>
+    
+        <div style="text-align: center;">
+            <div class="inline-container">
+                <div class="image-block" #img_block>
+                    <div *ngFor="let picture of images; let i=index">
+                        <img #picture src="{{picture}}" alt="{{'image ' + i}}">
+                    </div>
+                </div>
+            </div>
+            <div class="inline-container">
+                <img #bin style="height: 100px; margin-top: 150px;" src="https://www.vestil.com/images/i1200/TH-64-GRN-FL_A.jpg">
+            </div>
+        </div>
+
+
+        <div class="inline-buttons">
+            <button style="background-color: #002a57; width: 130px;" [routerLink]="['/ex4-img-display']" > Previous Exercise </button>
+            <button style="background-color: #002a57; width: 130px;" [routerLink]="['/ex5-drag-drop']"    >   Next Exercise   </button>
+        </div>
+    </div>
+
+</div>
