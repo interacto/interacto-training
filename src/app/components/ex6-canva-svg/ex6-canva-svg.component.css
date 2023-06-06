@@ -1,0 +1,6 @@
+#canvas-container {
+    height: 85%;
+    width: 95%;
+    border:1px solid black;
+    touch-action: none;
+  }

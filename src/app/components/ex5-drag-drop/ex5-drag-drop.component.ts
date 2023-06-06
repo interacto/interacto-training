@@ -47,10 +47,11 @@ export class Ex5DragDropComponent implements AfterViewInit {
 
       })
       .then((c, i) => {
-        console.log('then');
+        
         this.pic!.style.left = `${i.diffClientX}px`;
         this.pic!.style.top = `${i.diffClientY}px`;
-
+        
+        console.log('then' + this.pic!.style.top);
         if (this.insideRectangle(this.bin.nativeElement.getBoundingClientRect(), i.tgt.clientX, i.tgt.clientY) && this.pic.src != this.bin.nativeElement.src) {
           c.inside = true;
         } else {
@@ -70,6 +71,7 @@ export class Ex5DragDropComponent implements AfterViewInit {
         this.pic!.style.top = this.mementoY;
         this.pic!.style.position = this.mementoCSSPosition;
       })
+      .preventDefault()
       .bind();
   }
 
@@ -84,6 +86,7 @@ export class DeleteItem extends CommandBase {
   public inside: boolean = false;
 
   constructor(private component: Ex5DragDropComponent) {
+    console.log('constructor');
     super();
   }
 
