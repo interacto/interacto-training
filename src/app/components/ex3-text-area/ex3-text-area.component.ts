@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import {LogLevel, PartialButtonBinder, PartialTextInputBinder, UndoableCommand} from 'interacto';
 
+/* The following code is based on the example provided in https://github.com/interacto/example-angular
+*/
+
 @Component({
   selector: 'app-ex3-text-area',
   templateUrl: './ex3-text-area.component.html',
@@ -25,7 +28,6 @@ export class SetText extends UndoableCommand {
   constructor(private readonly textArea: HTMLTextAreaElement) {
     super();
     this.mementoText = this.textArea.value.slice(0, -1);
-    console.log('createMemento ' + this.mementoText);
   }
 
   protected override createMemento(): void {
@@ -34,7 +36,6 @@ export class SetText extends UndoableCommand {
 
   protected execution(): void {
     this.textArea.value = this.newText;
-    console.log('execution ' + this.newText);
 
   }
 
@@ -44,17 +45,14 @@ export class SetText extends UndoableCommand {
 
   public set text(txt: string) {
     this.newText = txt;
-    console.log('set text ' + this.newText);
   }
 
   public undo(): void {
     this.textArea.value = this.mementoText;
-    console.log('undo ' + this.newText);
   }
 
   public redo(): void {
     this.textArea.value = this.newText;
-    console.log('redo ' + this.newText);
   }
 
   public override getUndoName(): string {

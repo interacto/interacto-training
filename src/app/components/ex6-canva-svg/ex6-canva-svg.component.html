@@ -1,9 +1,23 @@
 <div class="container" role="main">
     
+    <div class="log-container" [style.width]="widthHistory">
+        <io-tree-history #treeComp style="height: 80%" [style.width]="widthHistory"></io-tree-history>
+    </div>
 
     <div class="content-ex2">
         <h1> Canvas </h1>
     
+        <p>
+        In this exercise, using Interacto with an SVG canvas, you will create a component with the following features:<br>
+        Double-click: Double-clicking on the canvas creates a predefined-size rectangle (undoable).<br>
+        Long pressure: Applying long pressure on a rectangle removes it (undoable).<br>
+        Tree-based undo history: Implement a tree-based undo history on the left, showing command sequences.<br>
+        Thumbnail history: Commands should generate canvas thumbnails for visualizing changes in the history.<br>
+        Drag and drop (DnD): Enable DnD functionality on rectangles for moving them, should be (undoable).<br>
+        Reciprocal DnD: Replace regular DnD with reciprocalDnD.<br>
+        If you need help, you can see <a href="https://github.com/interacto/example-angular/tree/master/src/app/tab-shapes"> this example </a>
+        or <a href="https://interacto.github.io/interactions#how-to-select-a-user-interaction"> this documentation </a> about the interactions .
+        </p>
     
         <h3>Example:</h3>
     

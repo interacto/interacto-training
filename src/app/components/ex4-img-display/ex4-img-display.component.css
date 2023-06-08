@@ -1,0 +1,26 @@
+.carousel{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 400px;
+    width: 400px;
+    overflow: auto;
+    border-style: solid;
+  }
+  
+  .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .container img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  

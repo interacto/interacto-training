@@ -2,6 +2,9 @@ import { AfterViewInit, Component, Input } from '@angular/core';
 import { ElementRef, ViewChild } from '@angular/core';
 import {Bindings, UndoHistoryBase, CommandBase} from 'interacto';
 
+/* The following code is based on the example provided in https://github.com/interacto/example-angular
+*/
+
 @Component({
   selector: 'app-ex4-img-display',
   templateUrl: './ex4-img-display.component.html',
@@ -37,7 +40,6 @@ export class Ex4ImgDisplayComponent implements AfterViewInit {
       .on(document.body)
       .toProduce(() => new ChangeCurrentPicture(this.pictures.length, this, true))
       .with(false, 'ArrowRight')
-      // The user cannot navigate between pictures if the picture tab is not active
       .when(() => this.tabActive)
       .bind();
 
@@ -45,7 +47,6 @@ export class Ex4ImgDisplayComponent implements AfterViewInit {
       .on(document.body)
       .toProduce(() => new ChangeCurrentPicture(this.pictures.length, this, false))
       .with(false, 'ArrowLeft')
-      // The user cannot navigate between pictures if the picture tab is not active
       .when(() => this.tabActive)
       .bind();
 
